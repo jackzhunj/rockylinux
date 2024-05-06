@@ -1,0 +1,10 @@
+---
+- name: Update Rockylinux servers packages
+  hosts: oracle
+  become: true
+
+  tasks:
+  - name: use dnf
+    ansible.builtin.dnf:
+      name: "*"
+      state: latest
